@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="w-screen h-screen overflow-hidden bg-cover bg-center select-none relative"
       style={{
-        backgroundImage: 'url(https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-2020-5120x2880-1455.jpg)',
+        backgroundImage: `url(${import.meta.env.BASE_URL}images/wallpaper.png)`,
         // Fallback gradient if image fails
         backgroundColor: '#3b82f6'
       }}
