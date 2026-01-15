@@ -38,28 +38,28 @@ const Dock = () => {
         {
             id: 'notes',
             title: 'Notes',
-            icon: <img src={`${import.meta.env.BASE_URL}icons/notes.png`} alt="Notes" className="w-full h-full object-cover" />,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Apple_Notes_%28macOS_Big_Sur%29.png" alt="Notes" className="w-full h-full object-cover" />,
             component: <Skills />,
             label: 'Notes'
         },
         {
             id: 'mail',
             title: 'Mail',
-            icon: <img src={`${import.meta.env.BASE_URL}icons/mail_fixed.png`} alt="Mail" className="w-full h-full object-cover" />,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/4/ae/Mail_Icon_%28macOS_Big_Sur%29.png" alt="Mail" className="w-full h-full object-cover" />,
             component: <Contact />,
             label: 'Mail'
         },
         {
             id: 'preview',
             title: 'Preview',
-            icon: <img src={`${import.meta.env.BASE_URL}icons/resume.png`} alt="Resume" className="w-full h-full object-cover" />,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/TextEdit_icon_%28macOS_Big_Sur%29.png" alt="Resume" className="w-full h-full object-cover" />,
             component: <Resume />,
             label: 'Resume'
         },
         {
             id: 'terminal',
             title: 'Terminal',
-            icon: <img src={`${import.meta.env.BASE_URL}icons/terminal.png`} alt="Terminal" className="w-full h-full object-cover" />,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Terminal_%28macOS_Big_Sur%29.png" alt="Terminal" className="w-full h-full object-cover" />,
             component: <div className="w-full h-full bg-black p-4 font-mono text-green-500 text-sm">
                 <div className="opacity-50 mb-2">Last login: {new Date().toDateString()} on ttys000</div>
                 <div>Welcome to Terminal. Type 'help' to start.</div>
