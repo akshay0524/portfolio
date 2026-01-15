@@ -24,42 +24,42 @@ const Dock = () => {
         {
             id: 'finder',
             title: 'Finder',
-            icon: <img src="https://images.icon-icons.com/3053/PNG/512/finder_macos_big_sur_icon_190038.png" alt="Finder" className="w-full h-full object-cover" />,
+            icon: <img src={`${import.meta.env.BASE_URL}icons/finder.png`} alt="Finder" className="w-full h-full object-cover" />,
             component: <About />,
             label: 'Finder'
         },
         {
             id: 'safari',
             title: 'Safari',
-            icon: <img src="https://images.icon-icons.com/3053/PNG/512/safari_macos_big_sur_icon_189957.png" alt="Safari" className="w-full h-full object-cover" />,
+            icon: <img src={`${import.meta.env.BASE_URL}icons/safari.png`} alt="Safari" className="w-full h-full object-cover" />,
             component: <Projects />,
             label: 'Safari'
         },
         {
             id: 'notes',
             title: 'Notes',
-            icon: <img src="https://images.icon-icons.com/3053/PNG/512/notes_macos_big_sur_icon_189998.png" alt="Notes" className="w-full h-full object-cover" />,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/MacOS_Big_Sur_Notes_icon.png" alt="Notes" className="w-full h-full object-cover" />,
             component: <Skills />,
             label: 'Notes'
         },
         {
             id: 'mail',
             title: 'Mail',
-            icon: <img src="https://images.icon-icons.com/3053/PNG/512/mail_macos_big_sur_icon_190018.png" alt="Mail" className="w-full h-full object-cover" />,
+            icon: <img src={`${import.meta.env.BASE_URL}icons/mail.png`} alt="Mail" className="w-full h-full object-cover" />,
             component: <Contact />,
             label: 'Mail'
         },
         {
             id: 'preview',
             title: 'Preview',
-            icon: <img src="https://images.icon-icons.com/3053/PNG/512/textedit_macos_big_sur_icon_189966.png" alt="Resume" className="w-full h-full object-cover" />,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/TextEdit_icon_%28macOS_Big_Sur%29.png" alt="Resume" className="w-full h-full object-cover" />,
             component: <Resume />,
             label: 'Resume'
         },
         {
             id: 'terminal',
             title: 'Terminal',
-            icon: <img src="https://images.icon-icons.com/3053/PNG/512/terminal_macos_big_sur_icon_189988.png" alt="Terminal" className="w-full h-full object-cover" />,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Terminal_%28macOS_Big_Sur%29.png" alt="Terminal" className="w-full h-full object-cover" />,
             component: <div className="w-full h-full bg-black p-4 font-mono text-green-500 text-sm">
                 <div className="opacity-50 mb-2">Last login: {new Date().toDateString()} on ttys000</div>
                 <div>Welcome to Terminal. Type 'help' to start.</div>
