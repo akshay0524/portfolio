@@ -1,75 +1,80 @@
-# MacOS Portfolio
+# macOS Portfolio 
 
-A pixel-perfect macOS Ventura/Big Sur inspired personal portfolio website built with React, TailwindCSS, and Framer Motion.
+A fully functional, interactive personal portfolio website inspired by the macOS Big Sur desktop interface. Built with **React**, **Tailwind CSS**, and **Framer Motion**, this project showcases a realistic OS experience on the web.
 
-## 🌟 Features
+## 🚀 **Live Demo**
 
-- **Desktop Experience**: Full window management system (drag, minimize, maximize).
-- **Dock**: Dynamic scaling dock with app shortcuts.
-- **Spotlight Search**: Press `Cmd + K` (or `Ctrl + K`) to launch apps or find projects.
-- **Responsive**: Adapts to mobile devices (simplified experience).
-- **Glassmorphism**: Beautiful blur effects and gradients.
-- **Apps Included**:
-  - **Finder**: About Me
-  - **Safari**: Projects Showcase
-  - **Notes**: Skills & Technologies
-  - **Mail**: Contact Form
-  - **Preview**: Resume Viewer
+**[Click here to view the live portfolio](https://akshay0524.github.io/portfolio/)**
+
+---
+
+## ✨ Features
+
+- **Realistic macOS Interface**: Includes a Boot Screen, Lock Screen, Menu Bar, and Dock with iconic "genie" effects.
+- **Window Management**: Fully functional window system (Drag, Minimize, Maximize, Close) powered by **Framer Motion**.
+- **Interactive Apps**:
+  - **Finder**: Browse "About Me" details in a file-system layout.
+  - **Safari**: View projects and external links.
+  - **Mail**: Functional contact form that integrates with your email client.
+  - **Terminal**: Interactive command-line interface.
+  - **Spotlight Search**: Search for apps and features globally (`Cmd + Space`).
+- **Responsive Design**: Optimized for Desktop, Tablet, and Mobile experiences.
+- **Custom Animations**: Smooth transitions, Dock magnification, and "Hello" boot sequences.
 
 ## 🛠️ Tech Stack
 
-- **Framework**: React + Vite
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **State Management**: Zustand
-- **Icons**: Lucide React
+- **Framework**: [React](https://reactjs.org/) (Vite)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) & [GSAP](https://greensock.com/gsap/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Icons**: [Lucide React](https://lucide.dev/) & macOS Assets
+- **Deployment**: GitHub Pages
 
-## 🚀 Getting Started
+## 📦 Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd portfolio
-   ```
+To run this project locally:
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/akshay0524/portfolio.git
+    cd portfolio
+    ```
 
-3. **Run development server**
-   ```bash
-   npm run dev
-   ```
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-4. **Build for production**
-   ```bash
-   npm run build
-   ```
+3.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
 
-## 📦 Deployment
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
 
-### Vercel (Recommended)
-1. Push your code to GitHub.
-2. Login to [Vercel](https://vercel.com).
-3. "Add New..." -> "Project".
-4. Import your styled-portfolio repository.
-5. Vercel will auto-detect Vite. Click **Deploy**.
+## 🚀 Deployment
 
-### Netlify
-1. Push to GitHub.
-2. Login to [Netlify](https://netlify.com).
-3. "New site from Git".
-4. Select repo.
-5. Build command: `npm run build`.
-6. Publish directory: `dist`.
-7. Click **Deploy**.
+This project depends on GitHub Pages for deployment.
 
-## 🎨 Customization
+1.  **Build the project**
+    ```bash
+    npm run predeploy
+    ```
+2.  **Deploy to `gh-pages` branch**
+    ```bash
+    npm run deploy
+    ```
 
-- **Wallpaper**: Change the URL in `src/App.jsx`
-- **Projects**: Edit `src/components/Apps/Projects.jsx`
-- **About**: Edit `src/components/Apps/About.jsx`
+## 🤝 Contact
+
+**K Akshay**  
+Frontend Engineer  
+📧 [Akshay246908@gmail.com](mailto:Akshay246908@gmail.com)  
+📍 Guntur, AP
 
 ---
-Designed by [Your Name]
+
+*Designed and developed with ❤️ by K Akshay.*
