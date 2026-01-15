@@ -38,7 +38,7 @@ const Dock = () => {
         {
             id: 'notes',
             title: 'Notes',
-            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/MacOS_Big_Sur_Notes_icon.png" alt="Notes" className="w-full h-full object-cover" />,
+            icon: <img src={`${import.meta.env.BASE_URL}icons/notes.png`} alt="Notes" className="w-full h-full object-cover" />,
             component: <Skills />,
             label: 'Notes'
         },
@@ -52,14 +52,14 @@ const Dock = () => {
         {
             id: 'preview',
             title: 'Preview',
-            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/TextEdit_icon_%28macOS_Big_Sur%29.png" alt="Resume" className="w-full h-full object-cover" />,
+            icon: <img src={`${import.meta.env.BASE_URL}icons/resume.png`} alt="Resume" className="w-full h-full object-cover" />,
             component: <Resume />,
             label: 'Resume'
         },
         {
             id: 'terminal',
             title: 'Terminal',
-            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Terminal_%28macOS_Big_Sur%29.png" alt="Terminal" className="w-full h-full object-cover" />,
+            icon: <img src={`${import.meta.env.BASE_URL}icons/terminal.png`} alt="Terminal" className="w-full h-full object-cover" />,
             component: <div className="w-full h-full bg-black p-4 font-mono text-green-500 text-sm">
                 <div className="opacity-50 mb-2">Last login: {new Date().toDateString()} on ttys000</div>
                 <div>Welcome to Terminal. Type 'help' to start.</div>
