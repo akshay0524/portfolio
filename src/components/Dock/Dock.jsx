@@ -66,7 +66,7 @@ const Dock = () => {
     ];
 
     return (
-        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 px-4 pb-2 z-50 rounded-3xl flex gap-3 h-16 bg-white/20 backdrop-blur-xl border border-white/20 shadow-2xl items-end mx-auto"
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 px-4 pb-2 z-50 rounded-3xl flex gap-3 h-16 bg-white/20 backdrop-blur-xl border border-white/20 shadow-2xl items-end mx-auto origin-bottom scale-[0.6] sm:scale-100 md:scale-100 transition-transform duration-300"
             onMouseMove={(e) => mouseX.set(e.pageX)}
             onMouseLeave={() => mouseX.set(null)}
         >

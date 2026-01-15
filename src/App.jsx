@@ -47,14 +47,14 @@ function App() {
       }}
     >
       {/* Hero Text */}
-      <div className="absolute inset-0 flex items-center justify-center z-0">
+      <div className="absolute inset-0 flex items-center justify-center z-0 px-4">
         <div className="text-center text-white/90">
-          <h2 className="text-2xl font-light mb-2 tracking-wide font-sans cursor-default">Hey, I'm K Akshay! welcome to my</h2>
-          <div className="flex justify-center items-center cursor-default select-none">
+          <h2 className="text-xl md:text-2xl font-light mb-2 tracking-wide font-sans cursor-default">Hey, I'm K Akshay! welcome to my</h2>
+          <div className="flex justify-center items-center cursor-default select-none flex-wrap">
             {"portfolio.".split("").map((char, index) => (
               <span
                 key={index}
-                className="text-7xl md:text-9xl font-light tracking-tighter drop-shadow-2xl font-sans inline-block"
+                className="text-5xl md:text-7xl lg:text-9xl font-light tracking-tighter drop-shadow-2xl font-sans inline-block"
                 onMouseEnter={(e) => {
                   import('gsap').then(({ default: gsap }) => {
                     gsap.to(e.target, {
