@@ -24,43 +24,47 @@ const Dock = () => {
         {
             id: 'finder',
             title: 'Finder',
-            icon: <div className="w-full h-full bg-gradient-to-b from-blue-100 to-blue-500 rounded-xl flex items-center justify-center border border-white/20 shadow-inner"><div className="text-3xl">😊</div></div>,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png" alt="Finder" className="w-full h-full object-cover" />,
             component: <About />,
             label: 'Finder'
         },
         {
             id: 'safari',
             title: 'Safari',
-            icon: <div className="w-full h-full bg-white rounded-xl flex items-center justify-center relative overflow-hidden"><div className="w-full h-full bg-gradient-to-b from-blue-400 to-blue-600 flex items-center justify-center text-white"><Globe size={32} /></div></div>,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Safari_browser_logo.svg/1024px-Safari_browser_logo.svg.png" alt="Safari" className="w-full h-full object-cover" />,
             component: <Projects />,
             label: 'Safari'
         },
         {
             id: 'notes',
             title: 'Notes',
-            icon: <div className="w-full h-full bg-yellow-100 rounded-xl flex items-center justify-center border-t-8 border-yellow-400 relative shadow-inner"><StickyNote className="text-gray-500" /></div>,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Notes_icon_dB.svg" alt="Notes" className="w-full h-full object-cover" />,
             component: <Skills />,
             label: 'Notes'
         },
         {
             id: 'mail',
             title: 'Mail',
-            icon: <div className="w-full h-full bg-gradient-to-b from-sky-400 to-blue-600 rounded-xl flex items-center justify-center text-white"><Mail size={32} /></div>,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Mail" className="w-full h-full object-cover" />,
             component: <Contact />,
             label: 'Mail'
         },
         {
             id: 'preview',
             title: 'Preview',
-            icon: <div className="w-full h-full bg-slate-700/80 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/20"><FileText className="text-white" size={32} /></div>,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/TextEdit_icon_%28macOS_Big_Sur%29.png/1024px-TextEdit_icon_%28macOS_Big_Sur%29.png" alt="Resume" className="w-full h-full object-cover" />,
             component: <Resume />,
             label: 'Resume'
         },
         {
             id: 'terminal',
             title: 'Terminal',
-            icon: <div className="w-full h-full bg-[#1e1e1e] rounded-xl flex items-center justify-center border border-gray-600 text-white font-mono text-xs shadow-inner"><span className="text-green-500">$_</span></div>,
-            component: <div className="w-full h-full bg-black p-4 font-mono text-green-500 text-sm">Welcome to Terminal...<br />Type 'help' to start.</div>,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Terminal_icon_%28Big_Sur%29.png/1024px-Terminal_icon_%28Big_Sur%29.png" alt="Terminal" className="w-full h-full object-cover" />,
+            component: <div className="w-full h-full bg-black p-4 font-mono text-green-500 text-sm">
+                <div className="opacity-50 mb-2">Last login: {new Date().toDateString()} on ttys000</div>
+                <div>Welcome to Terminal. Type 'help' to start.</div>
+                <div className="mt-2 text-white">➜  ~ <span className="animate-pulse">_</span></div>
+            </div>,
             label: 'Terminal'
         }
     ];
