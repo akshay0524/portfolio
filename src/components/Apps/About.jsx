@@ -54,7 +54,7 @@ const About = () => {
                         <div className="max-w-3xl mx-auto">
                             <div className="flex flex-col items-center mb-8">
                                 <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg">
-                                    <img src="/images/avatar.jpg" alt="K Akshay" className="w-full h-full object-cover" />
+                                    <img src={`${import.meta.env.BASE_URL}images/avatar.jpg`} alt="K Akshay" className="w-full h-full object-cover" />
                                 </div>
                                 <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">K Akshay</h1>
                                 <p className="text-gray-500 dark:text-gray-400 text-lg">Frontend Engineer</p>
