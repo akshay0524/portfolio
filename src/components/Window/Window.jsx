@@ -3,31 +3,40 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Minus } from 'lucide-react';
 import { useStore } from '../../context/useStore';
 
-const Window = ({ window }) => {
+const Window = ({ window: appWindow }) => {
     const { closeWindow, minimizeWindow, maximizeWindow, focusWindow, updateWindowPosition } = useStore();
     const constraintsRef = useRef(null);
+    const [isMobile, setIsMobile] = React.useState(window.innerWidth < 768);
 
-    const { id, title, component, isMinimized, isMaximized, zIndex, position } = window;
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const { id, title, component, isMinimized, isMaximized, zIndex, position } = appWindow;
 
     if (isMinimized) return null;
 
+    // Mobile overrides
+    const effectiveMaximized = isMaximized || isMobile;
+
     return (
         <motion.div
-            drag
-            dragConstraints={{ left: 0, top: 0, right: window.innerWidth - 100, bottom: window.innerHeight - 100 }}
+            drag={!effectiveMaximized}
+            dragConstraints={{ left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight }}
             dragMomentum={false}
             onDragStart={() => focusWindow(id)}
 
             initial={{ scale: 0.8, opacity: 0, y: 100 }}
             animate={{
-                scale: isMaximized ? 1 : 1,
+                scale: 1,
                 opacity: 1,
-
-                width: isMaximized ? '100vw' : 'min(800px, 90vw)',
-                height: isMaximized ? '90vh' : 'min(600px, 80vh)',
-                x: isMaximized ? 0 : (position?.x || 0),
-                y: isMaximized ? 32 : (position?.y || 0), // 32px for menu bar
-                borderRadius: isMaximized ? 0 : '12px'
+                width: effectiveMaximized ? '100vw' : 'min(800px, 90vw)',
+                height: effectiveMaximized ? (isMobile ? 'calc(100vh - 80px)' : '90vh') : 'min(600px, 80vh)', // Space for Dock on mobile
+                x: effectiveMaximized ? 0 : (position?.x || 0),
+                y: effectiveMaximized ? (isMobile ? 0 : 32) : (position?.y || 0),
+                borderRadius: effectiveMaximized ? 0 : '12px'
             }}
             exit={{ scale: 0.8, opacity: 0, y: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -35,12 +44,12 @@ const Window = ({ window }) => {
             style={{
                 position: 'absolute',
                 zIndex,
-                top: isMaximized ? 0 : '10%',
-                left: isMaximized ? 0 : '50%',
-                x: isMaximized ? 0 : (position?.x || '-50%'),
+                top: effectiveMaximized ? 0 : '10%',
+                left: effectiveMaximized ? 0 : '50%',
+                x: effectiveMaximized ? 0 : (position?.x || '-50%'),
                 willChange: 'transform, width, height'
             }}
-            className={`bg-[#f5f5f7] dark:bg-[#1e1e1e] shadow-2xl overflow-hidden flex flex-col border border-black/10 dark:border-white/10 ${isMaximized ? 'fixed inset-0 top-8' : 'rounded-xl'}`}
+            className={`bg-[#f5f5f7] dark:bg-[#1e1e1e] shadow-2xl overflow-hidden flex flex-col border border-black/10 dark:border-white/10 ${effectiveMaximized ? 'fixed inset-0 top-8' : 'rounded-xl'}`}
             onClick={() => focusWindow(id)}
         >
             {/* Window Header / Titlebar */}
