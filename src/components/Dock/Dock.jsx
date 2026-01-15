@@ -45,7 +45,7 @@ const Dock = () => {
         {
             id: 'mail',
             title: 'Mail',
-            icon: <img src={`${import.meta.env.BASE_URL}icons/mail.png`} alt="Mail" className="w-full h-full object-cover" />,
+            icon: <img src={`${import.meta.env.BASE_URL}icons/mail_fixed.png`} alt="Mail" className="w-full h-full object-cover" />,
             component: <Contact />,
             label: 'Mail'
         },
