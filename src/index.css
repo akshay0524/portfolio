@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 p-0 overflow-hidden font-sans select-none;
+    -webkit-font-smoothing: antialiased;
+    cursor: url("data:image/svg+xml,%3Csvg width='25' height='30' viewBox='0 0 25 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.92109 23.3642L2 2.8724L20.8415 15.5413L12.5574 16.9926L16.2996 24.3639L13.7844 25.6406L10.0381 18.2714L7.92109 23.3642Z' fill='black' stroke='white' stroke-width='2'/%3E%3C/svg%3E"), auto;
+  }
+
+  a,
+  button,
+  [role="button"],
+  .cursor-pointer {
+    cursor: url("data:image/svg+xml,%3Csvg width='25' height='26' viewBox='0 0 25 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.7417 19.3499C12.33 19.5705 13.9183 18.7981 14.5801 17.3644L17.2272 11.7583L11.6212 9.11124C10.1874 8.44946 9.41505 6.86111 9.63567 5.27276L10.132 1.63855L3.34961 16.2259L6.98383 15.7296L7.2223 18.4287C7.30066 19.3162 7.82865 20.0898 8.6019 20.4578C9.37515 20.8258 10.279 20.7303 10.9634 20.1983L10.7417 19.3499Z' fill='white' stroke='black' stroke-width='2'/%3E%3C/svg%3E") 6 2, pointer;
+  }
+}
+
+/* Custom scrollbar to match Mac look slightly better if needed, 
+   though Mac hides scrollbars mostly */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
